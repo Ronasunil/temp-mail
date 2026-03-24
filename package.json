@@ -1,0 +1,27 @@
+{
+  "name": "temp-mail",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Ronasunil/temp-mail#readme",
+  "bugs": {
+    "url": "https://github.com/Ronasunil/temp-mail/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronasunil/temp-mail.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "smtp-server": "^3.18.2"
+  }
+}
