@@ -1,4 +1,5 @@
 import { SMTPServer, SMTPServerAddress, SMTPServerOptions } from "smtp-server";
+import AppEnv from "../packages/shared/config/env.config";
 
 const smtpServer = new SMTPServer();
 
@@ -15,16 +16,22 @@ class SmtpServer {
     };
   }
 
-  config() {
+  private config() {
     const smtpServerOpt: SMTPServerOptions = {
       authOptional: true,
       onRcptTo: this.rcptoHandler(),
     };
   }
-  
+
   init() {
-    smtpServer.listen(2525, () => {
-      console.log("SMTP Server is listening on port 2525");
+    smtpServer.listen(AppEnv.SMTP_SERVER_PORT, () => {
+      this.config();
+      console.info(
+        `SMTP Server is listening on port ${AppEnv.SMTP_SERVER_PORT}`,
+      );
     });
   }
 }
+
+const smtpServerInstance = new SmtpServer();
+smtpServerInstance.init();
