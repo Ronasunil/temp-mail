@@ -4,3 +4,5 @@ build
 coverage
 .env
 *.env
+
+DES_PRD.md
