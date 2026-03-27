@@ -2,6 +2,7 @@ import { Server as HttpServer } from "http";
 import { App } from "./app";
 import { ENV } from "./configs/env.config";
 import { Database } from "./configs/database";
+import { PassportConfig } from "./configs/passport.config";
 
 class Server {
   private httpServer?: HttpServer;
@@ -10,6 +11,9 @@ class Server {
     try {
       // Connect to Database
       await Database.connect();
+
+      // Initialize Passport
+      PassportConfig.init();
 
       // Initialize App
       const appInstance = new App().app;

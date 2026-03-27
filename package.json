@@ -15,11 +15,17 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.ts",
+    "start": "ts-node src/server.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
-    "@types/smtp-server": "^3.5.12"
+    "@types/smtp-server": "^3.5.12",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -28,6 +34,9 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/mongoose": "^5.11.96",
     "@types/node": "^25.5.0",
+    "@types/passport": "^1.0.17",
+
+    "@types/passport-google-oauth20": "^2.0.17",
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
@@ -37,6 +46,9 @@
     "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.3.2",
+    "passport": "^0.7.0",
+
+    "passport-google-oauth20": "^2.0.0",
     "smtp-server": "^3.18.2"
   }
 }
